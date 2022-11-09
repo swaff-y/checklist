@@ -1,0 +1,70 @@
+--- 
+CodeReview: 
+  - 
+    point: "Are there unit/integration tests for all new functionality?"
+  - 
+    point: "Have new dependencies to other systems been introduced? If so has the README been updated?"
+  - 
+    point: "Has config/application.rb or config/environments/production.rb been updated? Pay close attention to production configuration code since it cannot be tested during QA."
+  - 
+    point: "Has the README been updated?"
+  - 
+    point: "Has the CHANGELOG (if gem) been updated?"
+  - 
+    point: "If there are migrations, ensure a deployment plan has been added to the ticket and has been tested"
+Development:
+  - 
+    point: "Update the README file (if relevant)"
+    sub: 
+      - "E.g. solution overview/design, configuration variables, how to deploy, how to run locally, gotchas"
+  - 
+    point: "(If gem) Update the CHANGELOG file or create the CHANGELOG.md file if it doesn't already exist"
+    sub: 
+      - "Add a new section to the top with the new version number and a few lines explaining the changes introduced."
+      - "If it is a change to the major version, be sure to list the breaking changes."
+  - 
+    point: "Update Confluence pages (if relevant)"
+    sub: 
+      - "If this is a new app, add it to Teams & Assets"
+      - "If this is a new salesforce app, add it to our list of Salesforce Integration Projects."
+  - 
+    point: "Run full test suite and check the coverage. All new lines of code should be covered by unit tests."
+  - 
+    point: "Read through the ticket requirements and acceptance criteria. Tick them off mentally one by one."
+    sub: 
+      - "If the requirements have changed since the ticket was created, update the requirements description."
+      - "If an acceptance criterion is no longer relevant, update it or remove it."
+      - "Ensure the acceptance criteria align with the requirements"
+  - 
+    point: "Add implementation details to the description"
+    sub: 
+      - "Include any other piece of information that is not technically a requirement but may be of relevance to QA"
+  - 
+    point: "Add a section for new configuration variables (if relevant)"
+    sub: 
+      - "New variables or secrets in AWS that need to be configured"
+  - 
+    point: "Add a section for deploy-to-production steps (if relevant). You might not be the person deploying this when it is ready for release."
+    sub: 
+      - "List the order of deployment if there are multiple applications involved and there is a dependency order."
+      - "Mention any configuration variables that need to be configured and where to find the values to use"
+      - "Any other steps that need to be taken before deploying to production (e.g. new virtual machines that are yet to be commissioned or databases created)"
+  - 
+    point: "Add a comment listing all applications/components that have been modified as part of the ticket, or have non-master branches that need to be deployed as part of this ticket. (See example below.)"
+    sub: 
+      - "Include the branch name (as some relevant changes may have been completed under a different branch name)"
+      - "Include a link to the pull request"
+      - "Include a link to the GREEN Bamboo build OR link to the GREEN Buildkite build"
+      - "Include a link to the Octopus release OR link to the AWS application (if deployed to AWS)"
+  - 
+    point: "If the application is an AWS app that uses OKTA integration (e.g. Claims Viewer), ensure the slice URL has been added to the application configuration in OKTA."
+  - 
+    point: "Review Confluence test cases"
+    sub: 
+      - "If there is any newly identified test cases, update the Confluence page"
+      - "Confirm with QA that the Confluence page covers everything off"
+DeploymentToProduction: 
+  - 
+    point: "Update the README file (if relevant)"
+    sub: 
+      - "E.g. solution overview/design, configuration variables, how to deploy, how to run locally, gotchas"
