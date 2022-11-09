@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = 'A cppb checklist'
   s.authors     = ['Kyle Swaffield']
   s.email       = 'kyle@swaff.iu.au'
-  s.files       = ['lib/check-list.rb', 'lib/check-list.yml', 'lib/version.rb']
+  s.files       = ['lib/check_list.rb', 'lib/check-list.yml', 'lib/version.rb']
   s.homepage    = 'https://rubygems.org/gems/check-list'
   s.license     = 'MIT'
   s.executables << 'check-list'
